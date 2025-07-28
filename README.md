@@ -68,8 +68,8 @@ This extension works with **any Git hosting service** that uses standard SSH URL
 
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/your-username/ssh-to-https-converter.git
-   cd ssh-to-https-converter
+   git clone https://github.com/NoSugarCoffee/chrome-ssh-converter.git
+   cd chrome-ssh-converter
    ```
 
 2. **Generate icons** (optional):
@@ -103,7 +103,7 @@ This extension works with **any Git hosting service** that uses standard SSH URL
 
 ### Project Structure
 ```
-ssh-to-https-converter/
+chrome-ssh-converter/
 ├── manifest.json          # Extension configuration
 ├── background.js          # Service worker (omnibox functionality)
 ├── popup/
