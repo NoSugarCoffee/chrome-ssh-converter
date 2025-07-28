@@ -1,0 +1,39 @@
+{
+  "name": "ssh-to-https-converter",
+  "version": "1.0.0",
+  "description": "Chrome extension that converts SSH Git URLs to HTTPS using address bar omnibox",
+  "main": "background.js",
+  "scripts": {
+    "validate": "node -e \"console.log('Validating manifest...'); JSON.parse(require('fs').readFileSync('manifest.json', 'utf8')); console.log('✅ manifest.json is valid');\"",
+    "icons": "python3 generate_icons.py",
+    "package": "zip -r ssh-to-https-converter.zip . -x '*.git*' 'node_modules/*' '*.zip' 'generate_icons.py' 'package*.json' 'install.sh'",
+    "install-help": "cat README.md | grep -A 10 'Installation'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "git",
+    "ssh",
+    "https",
+    "url-converter",
+    "omnibox",
+    "github",
+    "gitlab",
+    "bitbucket"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ssh-to-https-converter"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/ssh-to-https-converter/issues"
+  },
+  "homepage": "https://github.com/your-username/ssh-to-https-converter#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "Chrome >= 88"
+  ]
+}

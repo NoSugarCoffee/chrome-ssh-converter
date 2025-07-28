@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSH to HTTPS Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <h1>SSH → HTTPS</h1>
+      </div>
+      <div class="status" id="status">
+        <span class="status-indicator" id="statusIndicator"></span>
+        <span id="statusText">Enabled</span>
+      </div>
+    </div>
+
+    <!-- Main Toggle -->
+    <div class="section">
+      <div class="toggle-container">
+        <label class="toggle">
+          <input type="checkbox" id="enabledToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <div class="toggle-label">
+          <strong>Enable Extension</strong>
+          <p>Enable address bar SSH to HTTPS conversion</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Address Bar Usage -->
+    <div class="section">
+      <h3>🔗 Address Bar Usage</h3>
+      <div class="usage-info">
+        <div class="usage-method">
+          <strong>How to Use:</strong>
+          <p>Type <code>ssh</code> + Tab in address bar, then enter SSH URL</p>
+        </div>
+        <div class="usage-example">
+          <strong>Example:</strong>
+          <p><code>ssh</code> → Tab → <code>git@github.com:user/repo.git</code> → Enter</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- URL Tester -->
+    <div class="section">
+      <h3>Test Conversion</h3>
+      <div class="test-container">
+        <input 
+          type="text" 
+          id="testInput" 
+          placeholder="Enter SSH URL to test conversion..."
+          class="test-input"
+        >
+        <button id="testButton" class="test-button">Test</button>
+      </div>
+      <div id="testResult" class="test-result hidden"></div>
+    </div>
+
+    <!-- Statistics -->
+    <div class="section">
+      <h3>Statistics</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" id="conversionsCount">0</span>
+          <span class="stat-label">Conversions Today</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="totalConversions">0</span>
+          <span class="stat-label">Total Conversions</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supported Services -->
+    <div class="section">
+      <h3>Works With Any Git Server</h3>
+      <div class="services-info">
+        <p>This extension works with <strong>any Git hosting service</strong> that uses standard SSH URL format:</p>
+        <div class="services-grid">
+          <div class="service-item">GitHub</div>
+          <div class="service-item">GitLab</div>
+          <div class="service-item">Bitbucket</div>
+          <div class="service-item">Azure DevOps</div>
+          <div class="service-item">SourceHut</div>
+          <div class="service-item">Your Company</div>
+        </div>
+        <p class="services-note">+ Any other Git server with <code>git@hostname:user/repo.git</code> format</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#" id="helpLink">Help</a>
+        <a href="#" id="feedbackLink">Feedback</a>
+      </div>
+      <div class="version">v1.0.0</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
