@@ -151,14 +151,14 @@ document.addEventListener('DOMContentLoaded', function() {
   helpLink.addEventListener('click', function(e) {
     e.preventDefault();
     chrome.tabs.create({
-      url: 'https://github.com/your-username/ssh-to-https-converter#readme'
+      url: 'https://github.com/NoSugarCoffee/chrome-ssh-converter#readme'
     });
   });
 
   feedbackLink.addEventListener('click', function(e) {
     e.preventDefault();
     chrome.tabs.create({
-      url: 'https://github.com/your-username/ssh-to-https-converter/issues'
+      url: 'https://github.com/NoSugarCoffee/chrome-ssh-converter/issues'
     });
   });
 
